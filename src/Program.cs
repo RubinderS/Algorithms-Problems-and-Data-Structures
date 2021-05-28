@@ -12,7 +12,6 @@ namespace CSharpPractice {
       }
 
       System.Console.WriteLine("Ended" + DateTime.Now);
-
     }
   }
 }
