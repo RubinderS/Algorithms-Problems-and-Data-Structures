@@ -1,11 +1,48 @@
+using System;
 using System.Collections;
+using System.Collections.Generic;
+using System.Text;
 
 public static partial class Solution {
-  public static int LongestSubstringWithoutRepeating(string s) {
+  public static int LongestSubstringWithoutRepeating0(string s) {
+    var temp = new StringBuilder();
+    var longestSubstring = new StringBuilder();
+
     foreach (var c in s) {
-      System.Console.WriteLine(c);
+      if (temp.ToString().IndexOf(c) != -1) {
+        if (temp.Length >= longestSubstring.Length) {
+          longestSubstring.Clear();
+          longestSubstring.Append(temp.ToString());
+        }
+
+        temp.Clear();
+      }
+
+      temp.Append(c);
     }
 
-    return 0;
+    return longestSubstring.Length;
+  }
+
+  public static int LongestSubstringWithoutRepeating1(string s) {
+    if (s == null || s == String.Empty) {
+      return 0;
+    }
+
+    HashSet<char> set = new HashSet<char>();
+    int currentMax = 0,
+        i = 0,
+        j = 0;
+
+    while (j < s.Length) {
+      if (!set.Contains(s[j])) {
+        set.Add(s[j++]);
+        currentMax = Math.Max(currentMax, j - i);
+      } else {
+        set.Remove(s[i++]);
+      }
+    }
+
+    return currentMax;
   }
 }

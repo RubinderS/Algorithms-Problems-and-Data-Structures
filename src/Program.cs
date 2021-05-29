@@ -3,12 +3,12 @@
 namespace CSharpPractice {
   class Program {
     static void Main(string[] args) {
-      System.Console.WriteLine($"Started: {DateTime.Now}");
+      System.Console.WriteLine($"Started: {DateTime.Now}\n");
 
       if (Test.LongestSubstringWithoutRepeatingTest()) {
-        Console.WriteLine("All tests passed successfully!!! 😃");
+        Console.WriteLine("All tests passed successfully!!! 😃\n");
       } else {
-        Console.WriteLine("Tests failed 😟");
+        Console.WriteLine("Tests failed 😟\n");
       }
 
       System.Console.WriteLine($"Ended: {DateTime.Now}");
