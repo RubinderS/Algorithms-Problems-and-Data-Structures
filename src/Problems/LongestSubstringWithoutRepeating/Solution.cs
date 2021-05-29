@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Text;
 
 public static partial class Solution {
-  public static int LongestSubstringWithoutRepeating0(string s) {
+  public static int LongestSubstringWithoutRepeating_0(string s) {
     var temp = new StringBuilder();
     var longestSubstring = new StringBuilder();
 
@@ -24,7 +24,7 @@ public static partial class Solution {
     return longestSubstring.Length;
   }
 
-  public static int LongestSubstringWithoutRepeating1(string s) {
+  public static int LongestSubstringWithoutRepeating_1(string s) {
     if (s == null || s == String.Empty) {
       return 0;
     }

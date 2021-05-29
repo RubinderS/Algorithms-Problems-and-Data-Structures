@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 
 public static partial class Solution {
-  public static int FrogRiverOne0(int X, int[] A) {
+  public static int FrogRiverOne_0(int X, int[] A) {
     HashSet<int> set = new HashSet<int>();
 
     for (int i = 0; i < A.Length; i++) {
