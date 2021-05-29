@@ -1,7 +1,7 @@
 ﻿using System;
 
 namespace CSharpPractice {
-  class Program {
+  class Start {
     static void Main(string[] args) {
       System.Console.WriteLine($"Started: {DateTime.Now}\n");
 
