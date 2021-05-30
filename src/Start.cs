@@ -5,7 +5,7 @@ namespace CSharpPractice {
     static void Main(string[] args) {
       Console.WriteLine($"Started: {DateTime.Now}\n");
 
-      if (Test.FrogRiverOne()) {
+      if (Test.MaxCountersTest()) {
         Console.WriteLine("All tests passed successfully!!! 😃\n");
       } else {
         Console.WriteLine("Tests failed 😟\n");
