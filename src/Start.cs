@@ -17,7 +17,7 @@ namespace CSharpPractice {
         var res = (bool)methodsInfo[i].Invoke(null, null);
 
         if (res) {
-          Console.WriteLine($"{i + 1}: {methodsInfo[i].Name}: Success!!!");
+          Console.WriteLine($"{i + 1}: {methodsInfo[i].Name}: Passed");
         } else {
           Console.WriteLine($"{i + 1}: {methodsInfo[i].Name}: Failed");
           didAllTestsPass = false;
