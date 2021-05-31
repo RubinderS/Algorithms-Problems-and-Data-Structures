@@ -4,7 +4,7 @@ using System.Reflection;
 namespace CSharpPractice {
   class Start {
     static void Main(string[] args) {
-      Console.WriteLine($"Started: {DateTime.Now}\n");
+      Console.WriteLine($"\nStarted: {DateTime.Now}\n");
 
       Type TestType = typeof(Test);
       var didAllTestsPass = true;
@@ -36,7 +36,7 @@ namespace CSharpPractice {
         Console.ResetColor();
       }
 
-      Console.WriteLine($"Ended: {DateTime.Now}");
+      Console.WriteLine($"Ended: {DateTime.Now}\n");
     }
   }
 }
