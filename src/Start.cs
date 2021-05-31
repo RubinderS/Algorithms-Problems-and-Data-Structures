@@ -6,22 +6,22 @@ namespace CSharpPractice {
     static void Main(string[] args) {
       Console.WriteLine($"\nStarted: {DateTime.Now}\n");
 
-      Type TestType = typeof(Test);
       var didAllTestsPass = true;
-
-      foreach (var methodInfo in TestType.GetMethods(
+      Type TestType = typeof(Test);
+      var methodsInfo = TestType.GetMethods(
         BindingFlags.DeclaredOnly |
         BindingFlags.Public |
-        BindingFlags.Static)) {
-        var res = (bool)methodInfo.Invoke(null, null);
+        BindingFlags.Static);
+
+      for (int i = 0; i < methodsInfo.Length; i++) {
+        var res = (bool)methodsInfo[i].Invoke(null, null);
 
         if (res) {
-          Console.WriteLine($"{methodInfo.Name}: Success!!!");
+          Console.WriteLine($"{i + 1}: {methodsInfo[i].Name}: Success!!!");
         } else {
-          Console.WriteLine($"{methodInfo.Name}: Failed");
+          Console.WriteLine($"{i + 1}: {methodsInfo[i].Name}: Failed");
           didAllTestsPass = false;
         }
-
       }
 
       Console.WriteLine();
