@@ -7,8 +7,7 @@ namespace CSharpPractice {
       Console.WriteLine($"\n--------------------\n");
 
       var didAllTestsPass = true;
-      Type TestType = typeof(Test);
-      var methodsInfo = TestType.GetMethods(
+      var methodsInfo = typeof(Test).GetMethods(
         BindingFlags.DeclaredOnly |
         BindingFlags.Public |
         BindingFlags.Static);
