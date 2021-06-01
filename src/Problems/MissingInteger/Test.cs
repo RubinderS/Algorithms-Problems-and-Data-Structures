@@ -1,5 +1,3 @@
-using System.ComponentModel.DataAnnotations;
-
 public static partial class Test {
   public static bool MissingIntegerTest() {
     var didTestsPass = true;
