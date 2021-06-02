@@ -2,7 +2,7 @@ public static partial class Test {
   public static bool LongestSubstringWithoutRepeatingTest() {
     var didTestsPass = true;
 
-    // LongestSubstringWithoutRepeating0
+    // LongestSubstringWithoutRepeating_0
     if (Solution.LongestSubstringWithoutRepeating_0("abcabcbb") != 3) {
       didTestsPass = false;
     }
@@ -19,7 +19,7 @@ public static partial class Test {
       didTestsPass = false;
     }
 
-    // LongestSubstringWithoutRepeating1
+    // LongestSubstringWithoutRepeating_1
     if (Solution.LongestSubstringWithoutRepeating_1("abcabcbb") != 3) {
       didTestsPass = false;
     }
