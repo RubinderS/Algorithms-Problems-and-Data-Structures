@@ -6,7 +6,7 @@ public static partial class Test {
       didTestsPass = false;
     }
 
-    if (Solution.PermCheck(new int[] { 4, 1, 3 }) != 1) {
+    if (Solution.PermCheck(new int[] { 4, 1, 3 }) != 0) {
       didTestsPass = false;
     }
 
