@@ -1,23 +1,11 @@
+using Xunit;
+
 public static partial class Test {
-  public static bool PermCheckTest() {
-    var didTestsPass = true;
-
-    if (Solution.PermCheck_0(new int[] { 4, 1, 3, 2 }) != 1) {
-      didTestsPass = false;
-    }
-
-    if (Solution.PermCheck_0(new int[] { 4, 1, 3 }) != 0) {
-      didTestsPass = false;
-    }
-
-    if (Solution.PermCheck_1(new int[] { 4, 1, 3, 2 }) != 1) {
-      didTestsPass = false;
-    }
-
-    if (Solution.PermCheck_1(new int[] { 4, 1, 3 }) != 0) {
-      didTestsPass = false;
-    }
-
-    return didTestsPass;
+  [Theory]
+  [InlineData(new[] { 4, 1, 3, 2 }, 1)]
+  [InlineData(new[] { 4, 1, 3 }, 0)]
+  public static void PermCheckTest(int[] value, int expected) {
+    Assert.Equal(expected, Solution.PermCheck_0(value));
+    Assert.Equal(expected, Solution.PermCheck_1(value));
   }
 }
