@@ -1,7 +1,8 @@
 using System;
+using Xunit;
 
-public static partial class Solution {
-  public static int BinaryGap(int N) {
+public class BinaryGap {
+  public int Solution(int N) {
     var maxBinaryGap = 0;
     var binarySeq = Convert.ToString(N, 2);
     var j = -1;
@@ -21,5 +22,15 @@ public static partial class Solution {
     }
 
     return maxBinaryGap;
+  }
+
+  [Theory]
+  [InlineData(9, 2)]
+  [InlineData(529, 4)]
+  [InlineData(20, 1)]
+  [InlineData(15, 0)]
+  [InlineData(32, 0)]
+  public void Test(int value, int expected) {
+    Assert.Equal(expected, Solution(value));
   }
 }

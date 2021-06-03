@@ -1,7 +1,8 @@
 using System;
+using Xunit;
 
-public static partial class Solution {
-  public static int[] MaxCounters_0(int N, int[] A) {
+public class MaxCounters {
+  public int[] Solution(int N, int[] A) {
     int[] counters = new int[N];
     int maxCounterValue = 0;
     int lastMaxOperationValue = 0;
@@ -22,5 +23,11 @@ public static partial class Solution {
     }
 
     return counters;
+  }
+
+  [Theory]
+  [InlineData(5, new[] { 3, 4, 4, 6, 1, 4, 4 }, new[] { 3, 2, 2, 4, 2 })]
+  public void Test(int value1, int[] value2, int[] expected) {
+    Assert.Equal(expected, Solution(value1, value2));
   }
 }

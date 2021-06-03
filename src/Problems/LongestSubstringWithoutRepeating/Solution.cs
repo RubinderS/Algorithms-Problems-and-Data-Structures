@@ -1,9 +1,10 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using Xunit;
 
-public static partial class Solution {
-  public static int LongestSubstringWithoutRepeating_0(string s) {
+public class LongestSubstringWithoutRepeating {
+  public int Solution_0(string s) {
     var temp = new StringBuilder();
     var longestSubstring = new StringBuilder();
 
@@ -23,7 +24,7 @@ public static partial class Solution {
     return longestSubstring.Length;
   }
 
-  public static int LongestSubstringWithoutRepeating_1(string s) {
+  public int Solution_1(string s) {
     if (s == null || s == String.Empty) {
       return 0;
     }
@@ -43,5 +44,15 @@ public static partial class Solution {
     }
 
     return currentMax;
+  }
+
+  [Theory]
+  [InlineData("abcabcbb", 3)]
+  [InlineData("bbbbb", 1)]
+  [InlineData("pwwkew", 3)]
+  [InlineData("", 0)]
+  public void Test(string value, int expected) {
+    Assert.Equal(expected, Solution_0(value));
+    Assert.Equal(expected, Solution_1(value));
   }
 }
