@@ -1,25 +1,13 @@
+using Xunit;
+
 public static partial class Test {
-  public static bool BinaryGapTest() {
-    if (Solution.BinaryGap(9) != 2) {
-      return false;
-    }
-
-    if (Solution.BinaryGap(529) != 4) {
-      return false;
-    }
-
-    if (Solution.BinaryGap(20) != 1) {
-      return false;
-    }
-
-    if (Solution.BinaryGap(15) != 0) {
-      return false;
-    }
-
-    if (Solution.BinaryGap(32) != 0) {
-      return false;
-    }
-
-    return true;
+  [Theory]
+  [InlineData(9, 2)]
+  [InlineData(529, 4)]
+  [InlineData(20, 1)]
+  [InlineData(15, 0)]
+  [InlineData(32, 0)]
+  public static void BinaryGapTest(int value, int expected) {
+    Assert.Equal(expected, Solution.BinaryGap(value));
   }
 }

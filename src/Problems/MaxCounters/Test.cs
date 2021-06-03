@@ -1,16 +1,10 @@
 using System.Linq;
+using Xunit;
 
 public static partial class Test {
-  public static bool MaxCountersTest() {
-    var didTestsPass = true;
-
-    if (!Enumerable.SequenceEqual(
-      Solution.MaxCounters_0(5, new int[] { 3, 4, 4, 6, 1, 4, 4 }),
-      new int[] { 3, 2, 2, 4, 2 }
-      )) {
-      didTestsPass = false;
-    }
-
-    return didTestsPass;
+  [Theory]
+  [InlineData(5, new[] { 3, 4, 4, 6, 1, 4, 4 }, new[] { 3, 2, 2, 4, 2 })]
+  public static void MaxCountersTest(int value1, int[] value2, int[] expected) {
+    Assert.Equal(expected, Solution.MaxCounters_0(value1, value2));
   }
 }

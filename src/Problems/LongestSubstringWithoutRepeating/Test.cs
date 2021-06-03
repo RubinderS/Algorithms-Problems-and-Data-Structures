@@ -1,41 +1,13 @@
+using Xunit;
+
 public static partial class Test {
-  public static bool LongestSubstringWithoutRepeatingTest() {
-    var didTestsPass = true;
-
-    // LongestSubstringWithoutRepeating_0
-    if (Solution.LongestSubstringWithoutRepeating_0("abcabcbb") != 3) {
-      didTestsPass = false;
-    }
-
-    if (Solution.LongestSubstringWithoutRepeating_0("bbbbb") != 1) {
-      didTestsPass = false;
-    }
-
-    if (Solution.LongestSubstringWithoutRepeating_0("pwwkew") != 3) {
-      didTestsPass = false;
-    }
-
-    if (Solution.LongestSubstringWithoutRepeating_0("") != 0) {
-      didTestsPass = false;
-    }
-
-    // LongestSubstringWithoutRepeating_1
-    if (Solution.LongestSubstringWithoutRepeating_1("abcabcbb") != 3) {
-      didTestsPass = false;
-    }
-
-    if (Solution.LongestSubstringWithoutRepeating_1("bbbbb") != 1) {
-      didTestsPass = false;
-    }
-
-    if (Solution.LongestSubstringWithoutRepeating_1("pwwkew") != 3) {
-      didTestsPass = false;
-    }
-
-    if (Solution.LongestSubstringWithoutRepeating_1("") != 0) {
-      didTestsPass = false;
-    }
-
-    return didTestsPass;
+  [Theory]
+  [InlineData("abcabcbb", 3)]
+  [InlineData("bbbbb", 1)]
+  [InlineData("pwwkew", 3)]
+  [InlineData("", 0)]
+  public static void LongestSubstringWithoutRepeatingTest(string value, int expected) {
+    Assert.Equal(expected, Solution.LongestSubstringWithoutRepeating_0(value));
+    Assert.Equal(expected, Solution.LongestSubstringWithoutRepeating_1(value));
   }
 }
