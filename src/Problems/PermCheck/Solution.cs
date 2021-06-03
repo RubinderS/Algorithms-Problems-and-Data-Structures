@@ -1,8 +1,9 @@
 using System;
 using System.Collections.Generic;
+using Xunit;
 
-public static partial class Solution {
-  public static int PermCheck_0(int[] A) {
+public class PermCheck {
+  public int Solution_0(int[] A) {
     Array.Sort(A);
 
     for (int i = 0; i < A.Length; i++) {
@@ -14,7 +15,7 @@ public static partial class Solution {
     return 1;
   }
 
-  public static int PermCheck_1(int[] A) {
+  public int Solution_1(int[] A) {
     HashSet<int> set = new HashSet<int>();
 
     foreach (var integer in A) {
@@ -26,5 +27,13 @@ public static partial class Solution {
     }
 
     return set.Count == A.Length ? 1 : 0;
+  }
+
+  [Theory]
+  [InlineData(new[] { 4, 1, 3, 2 }, 1)]
+  [InlineData(new[] { 4, 1, 3 }, 0)]
+  public void Test(int[] value, int expected) {
+    Assert.Equal(expected, Solution_0(value));
+    Assert.Equal(expected, Solution_1(value));
   }
 }

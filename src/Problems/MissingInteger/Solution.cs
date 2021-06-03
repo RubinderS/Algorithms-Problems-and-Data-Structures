@@ -1,7 +1,8 @@
 using System;
+using Xunit;
 
-public static partial class Solution {
-  public static int MissingInteger(int[] A) {
+public class MissingInteger {
+  public int Solution(int[] A) {
     var smallestMissingInteger = 1;
     Array.Sort(A);
 
@@ -12,5 +13,13 @@ public static partial class Solution {
     }
 
     return smallestMissingInteger;
+  }
+
+  [Theory]
+  [InlineData(new[] { 1, 3, 6, 4, 1, 2 }, 5)]
+  [InlineData(new[] { 1, 2, 3 }, 4)]
+  [InlineData(new[] { -1, -3 }, 1)]
+  public void Test(int[] value, int expected) {
+    Assert.Equal(expected, Solution(value));
   }
 }

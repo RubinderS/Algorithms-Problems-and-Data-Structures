@@ -1,3 +1,6 @@
 {
-  "omnisharp.enableImportCompletion": true
+  "omnisharp.enableImportCompletion": true,
+  "cSpell.words": [
+    "Xunit"
+  ]
 }
