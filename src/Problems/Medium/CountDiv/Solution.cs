@@ -2,7 +2,7 @@ using Xunit;
 
 public class CountDiv {
   public int Solution(int A, int B, int K) {
-    return 0;
+    return (B - A) / K + ((A % K == 0 || B % K == 0) ? 1 : 0);
   }
 
   [Theory]
