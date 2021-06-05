@@ -1,8 +1,15 @@
+using System;
 using Xunit;
 
 public class PermMissingElem {
   public int Solution(int[] A) {
-    return 0;
+    var elementsFound = new int[A.Length + 1];
+
+    foreach (var integer in A) {
+      elementsFound[integer - 1] = 1;
+    }
+
+    return Array.IndexOf(elementsFound, 0) + 1;
   }
 
   [Theory]
