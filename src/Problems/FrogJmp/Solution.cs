@@ -2,7 +2,13 @@ using Xunit;
 
 public class FrogJmp {
   public int Solution(int X, int Y, int D) {
+    if (X >= Y) {
+      return 0;
+    }
+
     var numberOfJumps = 0;
+    var distance = Y - X;
+    numberOfJumps = distance / D + (distance % D != 0 ? 1 : 0);
     return numberOfJumps;
   }
 
