@@ -2,11 +2,25 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "Debug Test",
+      "label": "Debug Watch Test",
       "command": "dotnet",
       "type": "process",
       "args": ["watch", "test"],
       "options": {"env": {"VSTEST_HOST_DEBUG": "1"}},
+      "problemMatcher": "$msCompile"
+    },
+    {
+      "label": "Run Test",
+      "command": "dotnet",
+      "type": "process",
+      "args": ["test"],
+      "problemMatcher": "$msCompile"
+    },
+    {
+      "label": "Run Watch Test",
+      "command": "dotnet",
+      "type": "process",
+      "args": ["watch", "test"],
       "problemMatcher": "$msCompile"
     }
   ]
