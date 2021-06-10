@@ -1,5 +1,7 @@
 # CSharp-Coding-Problems
 
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/rubinders/CSharp-Coding-Problems/Test?style=flat-square)
+
 Solving Problems in C#
 
 ## How to run
