@@ -1,6 +1,6 @@
 # Algorithms, Problems and Data Structures
 
-![GitHub Workflow Status](https://img.shields.io/github/workflow/status/rubinders/CSharp-Coding-Problems/Test?style=flat-square)
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/rubinders/Algorithms-Problems-and-Data-Structures/Test?label=Test&style=flat-square)
 
 Algorithms, Problems and Data Structures using C#
 
