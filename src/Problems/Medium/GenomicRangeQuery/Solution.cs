@@ -4,7 +4,7 @@ using Xunit;
 
 public class GenomicRangeQuery {
   private enum GNOME {
-    A = 'A',
+    A,
     C,
     G,
     T,
