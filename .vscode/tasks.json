@@ -2,7 +2,7 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "Debug Watch Test",
+      "label": "Debug Test",
       "type": "process",
       "command": "dotnet",
       "args": ["watch", "test"],
@@ -10,14 +10,14 @@
       "problemMatcher": "$msCompile"
     },
     {
-      "label": "Run Test",
+      "label": "Test",
       "type": "process",
       "command": "dotnet",
       "args": ["test"],
       "problemMatcher": "$msCompile"
     },
     {
-      "label": "Run Watch Test",
+      "label": "Watch Test",
       "type": "process",
       "command": "dotnet",
       "args": ["watch", "test"],
