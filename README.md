@@ -1,8 +1,8 @@
-# CSharp-Coding-Problems
+# Algorithms, Problems and Data Structures
 
 ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/rubinders/CSharp-Coding-Problems/Test?style=flat-square)
 
-Solving Problems in C#
+Algorithms, Problems and Data Structures using C#
 
 ## How to run
 
