@@ -11,5 +11,3 @@ public class PassingCars {
     Assert.Equal(expected, value1);
   }
 }
-
-
