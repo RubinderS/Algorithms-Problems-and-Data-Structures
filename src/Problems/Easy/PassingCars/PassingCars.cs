@@ -17,7 +17,6 @@ public class PassingCars {
       }
     }
 
-
     return pairs;
   }
 
